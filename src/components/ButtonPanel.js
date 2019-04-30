@@ -33,7 +33,7 @@ class ButtonPanel extends Component {
           <Button name="3" />
         </ButtonContainer>
         <ButtonContainer>
-          <Button name="-" />
+          <Button name="±" />
           <Button name="0" />
           <Button name="." />
         </ButtonContainer>

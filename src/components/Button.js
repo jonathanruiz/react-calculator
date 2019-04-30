@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const ButtonBox = styled.div`
-  border: 1px #000 solid;
   background-color: #fff;
+  margin: 2px;
   padding: 15px 15px;
+
   font-size: 24px;
   width: 40px;
   height: 40px;
