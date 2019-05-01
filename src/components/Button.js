@@ -19,9 +19,24 @@ const ButtonBox = styled.div`
 `;
 
 class Button extends Component {
+  componentDidMount = () => {
+    document.addEventListener("keydown", this.handleKeyDown);
+  };
+
+  handleKeyDown = event => {
+    if (event.keyCode === this.props.keyCode) {
+      console.log(this.props.name);
+    }
+  };
+
   render() {
     return (
-      <ButtonBox role="button" className={this.props.className}>
+      <ButtonBox
+        role="button"
+        className={this.props.className}
+        onKeyDown={this.handleKeyDown}
+        keyCode={this.props.keyCode}
+      >
         {this.props.name}
       </ButtonBox>
     );
@@ -30,7 +45,8 @@ class Button extends Component {
 
 Button.propTypes = {
   className: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  keyCode: PropTypes.number
 };
 
 export default Button;

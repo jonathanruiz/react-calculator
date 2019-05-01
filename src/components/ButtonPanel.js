@@ -28,32 +28,32 @@ class ButtonPanel extends Component {
         <ButtonContainer>
           <Button name="CE" />
           <Button name="C" />
-          <Button name="DEL" />
+          <Button keyCode={8} name="DEL" />
           <Button name="÷" />
         </ButtonContainer>
         <ButtonContainer>
-          <Button name="7" className="number-tile" />
-          <Button name="8" className="number-tile" />
-          <Button name="9" className="number-tile" />
+          <Button keyCode={55} name="7" className="number-tile" />
+          <Button keyCode={56} name="8" className="number-tile" />
+          <Button keyCode={57} name="9" className="number-tile" />
           <Button name="*" />
         </ButtonContainer>
         <ButtonContainer>
-          <Button name="4" className="number-tile" />
-          <Button name="5" className="number-tile" />
-          <Button name="6" className="number-tile" />
+          <Button keyCode={52} name="4" className="number-tile" />
+          <Button keyCode={53} name="5" className="number-tile" />
+          <Button keyCode={54} name="6" className="number-tile" />
           <Button name="-" />
         </ButtonContainer>
         <ButtonContainer>
-          <Button name="1" className="number-tile" />
-          <Button name="2" className="number-tile" />
-          <Button name="3" className="number-tile" />
+          <Button keyCode={49} name="1" className="number-tile" />
+          <Button keyCode={50} name="2" className="number-tile" />
+          <Button keyCode={51} name="3" className="number-tile" />
           <Button name="+" />
         </ButtonContainer>
         <ButtonContainer>
           <Button name="±" />
-          <Button name="0" className="number-tile" />
-          <Button name="." />
-          <Button name="=" />
+          <Button keyCode={48} name="0" className="number-tile" />
+          <Button keyCode={190} name="." />
+          <Button keyCode={13} name="=" />
         </ButtonContainer>
       </Container>
     );
