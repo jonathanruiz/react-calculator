@@ -28,11 +28,23 @@ class Button extends Component {
       case "DEL":
         console.log("This will delete one digit");
         break;
-      case "=":
-        console.log("This will find the value");
+      case "+":
+        console.log("This will add the value");
+        break;
+      case "-":
+        console.log("This will subtract the value");
         break;
       case "*":
         console.log("This will multiply the number");
+        break;
+      case "/":
+        console.log("This will divide the value");
+        break;
+      case "=":
+        console.log("This will find the value");
+        break;
+      case ".":
+        console.log("This will place a decimal");
         break;
       default:
         console.log(`This is the number: ${this.props.name}`);
