@@ -23,9 +23,30 @@ class Button extends Component {
     document.addEventListener("keydown", this.handleKeyDown);
   };
 
+  determineKey = key => {
+    switch (key) {
+      case "DEL":
+        console.log("This will delete one digit");
+        break;
+      case "=":
+        console.log("This will find the value");
+        break;
+      case "*":
+        console.log("This will multiply the number");
+        break;
+      default:
+        console.log(`This is the number: ${this.props.name}`);
+        break;
+    }
+  };
+
+  handleClick = () => {
+    this.determineKey();
+  };
+
   handleKeyDown = event => {
     if (event.keyCode === this.props.keyCode) {
-      console.log(this.props.name);
+      this.determineKey(this.props.name);
     }
   };
 
@@ -33,9 +54,10 @@ class Button extends Component {
     return (
       <ButtonBox
         role="button"
-        className={this.props.className}
-        onKeyDown={this.handleKeyDown}
         keyCode={this.props.keyCode}
+        className={this.props.className}
+        onClick={this.handleClick}
+        onKeyDown={this.handleKeyDown}
       >
         {this.props.name}
       </ButtonBox>
@@ -45,7 +67,7 @@ class Button extends Component {
 
 Button.propTypes = {
   className: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   keyCode: PropTypes.number
 };
 
