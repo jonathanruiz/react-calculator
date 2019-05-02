@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import ButtonPanel from "./components/ButtonPanel";
 import Display from "./components/Display";
@@ -11,13 +11,15 @@ const AppContainer = styled.div`
   user-select: none;
 `;
 
-const App = () => {
-  return (
-    <AppContainer>
-      <Display />
-      <ButtonPanel />
-    </AppContainer>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <AppContainer>
+        <Display />
+        <ButtonPanel />
+      </AppContainer>
+    );
+  }
+}
 
 export default App;

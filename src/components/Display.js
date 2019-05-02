@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const DisplayBox = styled.div`
   background-color: #fff;
@@ -18,13 +19,24 @@ const DisplayBox = styled.div`
 `;
 
 class Display extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 0
+    };
+  }
+
   render() {
     return (
       <DisplayBox>
-        <span>0</span>
+        <span>{this.state.value}</span>
       </DisplayBox>
     );
   }
 }
+
+Display.propTypes = {
+  value: PropTypes.number
+};
 
 export default Display;
