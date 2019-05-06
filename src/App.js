@@ -12,10 +12,17 @@ const AppContainer = styled.div`
 `;
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 0
+    };
+  }
+
   render() {
     return (
       <AppContainer>
-        <Display />
+        <Display value={this.state.value} />
         <ButtonPanel />
       </AppContainer>
     );

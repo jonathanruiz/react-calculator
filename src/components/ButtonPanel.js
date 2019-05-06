@@ -22,6 +22,20 @@ const ButtonContainer = styled.div`
 `;
 
 class ButtonPanel extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 0
+    };
+  }
+
+  handleClick = () => {
+    // this.setState({ value: this.props.handleClick }, () => {
+    //   console.log(`state was set to ${this.state.value}`);
+    // });
+    console.log(`Hello ${this.props.name}`);
+  };
+
   render() {
     return (
       <Container>

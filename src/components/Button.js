@@ -48,12 +48,13 @@ class Button extends Component {
         break;
       default:
         console.log(`This is the number: ${this.props.name}`);
-        break;
+        console.log(this.props.name);
+        return this.props.name;
     }
   };
 
   handleClick = () => {
-    this.determineKey();
+    this.determineKey(this.props.name);
   };
 
   handleKeyDown = event => {

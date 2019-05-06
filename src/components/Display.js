@@ -19,17 +19,10 @@ const DisplayBox = styled.div`
 `;
 
 class Display extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: 0
-    };
-  }
-
   render() {
     return (
       <DisplayBox>
-        <span>{this.state.value}</span>
+        <span>{this.props.value}</span>
       </DisplayBox>
     );
   }
